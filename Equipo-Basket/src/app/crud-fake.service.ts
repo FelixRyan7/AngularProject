@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class FakeBackendService {
+export class CrudFakeService {
   items: any[] = [{
                     id: 1,
                     nombre: 'Juan Carlos Navarro',
