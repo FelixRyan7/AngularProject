@@ -5,5 +5,6 @@ export interface Player {
     num: number;
     edad: number;
     img: String;
+    video: String;
 }
   

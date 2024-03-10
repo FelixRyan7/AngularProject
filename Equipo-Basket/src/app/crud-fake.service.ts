@@ -12,7 +12,8 @@ export class CrudFakeService {
                     num: 7,
                     posicion: "Escolta",
                     edad: 43,
-                    img: '/assets/img/Juan_Carlos_Navarro.jpg'
+                    img: '/assets/img/Juan_Carlos_Navarro.jpg',
+                    video: '/assets/video/Juan_Carlos_Navarro.mp4'
                   },
                   {
                     id: 2,
@@ -20,7 +21,8 @@ export class CrudFakeService {
                     num: 16,
                     posicion: "Ala-pivot",
                     edad: 43,
-                    img: '/assets/img/Pau_Gasol.jpg'
+                    img: '/assets/img/Pau_Gasol.jpg',
+                    video: '/assets/video/Pau_Gasol.mp4'
                   },
                   {
                     id: 3,
@@ -28,7 +30,8 @@ export class CrudFakeService {
                     num: 	33,
                     posicion: "Pivot",
                     edad: 39,
-                    img: '/assets/img/Marc_Gasol.jpg'
+                    img: '/assets/img/Marc_Gasol.jpg',
+                    video: '/assets/video/Marc_Gasol.mp4'
                   },
                   {
                     id: 4,
@@ -36,7 +39,8 @@ export class CrudFakeService {
                     num: 	33,
                     posicion: "Alero",
                     edad: 39,
-                    img: '/assets/img/Rudy_Fernandez.jpg'
+                    img: '/assets/img/Rudy_Fernandez.jpg',
+                    video: '/assets/video/Rudy_Fernandez.mp4'
                   },
                   {
                     id: 5,
@@ -44,7 +48,8 @@ export class CrudFakeService {
                     num: 	9,
                     posicion: "Base",
                     edad: 33,
-                    img: '/assets/img/RickyRubio.jpg'
+                    img: '/assets/img/RickyRubio.jpg',
+                    video: '/assets/video/RickyRubio.mp4'
                   }];
   newPlayer: any = {};
 
