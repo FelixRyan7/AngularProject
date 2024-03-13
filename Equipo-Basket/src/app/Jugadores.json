@@ -1,0 +1,42 @@
+ [
+    {
+      "nombre": "Lebron",
+      "apellidos": "James",
+      "posicion": "Alero",
+      "edad": 37,
+      "altura": "2.06",
+      "video": "https://www.youtube.com/watch?v=xxxxxxxxxxx"
+    },
+    {
+      "nombre": "Stephen",
+      "apellidos": "Curry",
+      "posicion": "Base",
+      "edad": 34,
+      "altura": "1.88",
+      "video": "https://www.youtube.com/watch?v=yyyyyyyyyyy"
+    },
+    {
+      "nombre": "Kevin",
+      "apellidos": "Durant",
+      "posicion": "Ala-Pívot",
+      "edad": 33,
+      "altura": "2.08",
+      "video": "https://www.youtube.com/watch?v=zzzzzzzzzzz"
+    },
+    {
+      "nombre": "Giannis",
+      "apellidos": "Antetokounmpo",
+      "posicion": "Pívot",
+      "edad": 28,
+      "altura": "2.11",
+      "video": "https://www.youtube.com/watch?v=wwwwwwwwwww"
+    },
+    {
+      "nombre": "Kawhi",
+      "apellidos": "Leonard",
+      "posicion": "Alero",
+      "edad": 31,
+      "altura": "2.01",
+      "video": "https://www.youtube.com/watch?v=vvvvvvvvvvv"
+    }
+  ]

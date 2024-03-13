@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="sidebar bg-light w-25 p-4"> <!-- Modifiqué la clase w-25 por w-50 -->
+        <h2 class="text-dark">Jugadores del equipo</h2>
+        <div class="players-list mt-4">
+            <ul class="list-group list-unstyled">
+                <li class="mt-4 p-2 fs-5 border-bottom player" *ngFor="let jugadores of listaJugadores" (click)="mostrarDetalles(jugadores.nombre)">
+                    {{ jugadores.nombre}} 
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    <div class="w-75 container d-flex flex-column align-items-center"> <!-- Div adicional para los detalles -->
+        
+            <app-detalles [jugador]="jugador"></app-detalles>
+        
+        
+            <app-media [jugador]="jugador" [videoName]="videoName"
+            [videoPath]="videoPath"></app-media>
+        
+        
+    </div>
+
+</div>
+
