@@ -1,9 +1,10 @@
 <section class="container">
     <button [routerLink]="['/']" class="btn btn-primary">Ver Todos</button> 
     <h1>{{player.nombre}}</h1>
-    <video>
+
+    <app-media-component>
         <source src="{{player.video}}" />
-    </video>
+    </app-media-component>
 
 
 </section>

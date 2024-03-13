@@ -1,13 +1,13 @@
 import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Player } from '../player';
 import { CrudFakeService } from '../crud-fake.service';
 import {RouterModule} from '@angular/router';
+import { MediaComponentComponent } from '../media-component/media-component.component';
 
 @Component({
   selector: 'app-detail-component',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, MediaComponentComponent],
   templateUrl: './detail-component.component.html',
   styleUrl: './detail-component.component.css'
 })
