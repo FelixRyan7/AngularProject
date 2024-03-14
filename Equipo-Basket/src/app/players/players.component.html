@@ -1,9 +1,30 @@
 <div class="row">
     <div class="sidebar bg-light w-25 p-4"> <!-- Modifiqué la clase w-25 por w-50 -->
         <h2 class="text-dark">Jugadores del equipo</h2>
+        <!-- Filtrar por edad -->
+        <div class="form-group">
+            <label for="age">Selecciona la edad:</label>
+            <select id="age" class="form-control" [(ngModel)]="selectedAge">
+                <option value="0">Todos</option>
+                <option *ngFor="let age of ageOptions" [value]="age">{{ age }}</option>
+            </select>
+        </div>
+        <!-- Filtrar por posicion -->
+        <div class="form-group">
+            <label for="position">Selecciona la posición:</label>
+            <select id="position" class="form-control" [(ngModel)]="selectedPosition">
+                <option value="">Todos</option>
+                <option value="Alero">Alero</option>
+                <option value="Base">Base</option>
+                <option value="Ala-Pívot">Ala-Pívot</option>
+                <option value="Pívot">Pívot</option>
+            </select>
+        </div>
+        
         <div class="players-list mt-4">
             <ul class="list-group list-unstyled">
-                <li class="mt-4 p-2 fs-5 border-bottom player" *ngFor="let jugadores of listaJugadores" (click)="mostrarDetalles(jugadores.nombre)">
+                <!-- aqui recorremos la lista de jugadores con ngfor y aplicamos el filtro del pipe que hemos creado para filtrar por edad y posicion, le pasamos como parametros al metodo del pipe la edad seleccionada y la posicion seleccionada para realizar el filtrado, tambien al hacer click ejecutamos la funcion mostrar detalles y video -->
+                <li class="mt-4 p-2 fs-5 border-bottom player" *ngFor="let jugadores of listaJugadores | playerFilter:{ age: selectedAge, position: selectedPosition }" (click)="mostrarDetalles(jugadores.nombre)">
                     {{ jugadores.nombre}} 
                 </li>
                 
@@ -11,7 +32,7 @@
         </div>
     </div>
 
-    <div class="w-75 container d-flex flex-column align-items-center"> <!-- Div adicional para los detalles -->
+    <div class="w-75 container d-flex flex-column align-items-center"> 
         
             <app-detalles [jugador]="jugador"></app-detalles>
         

@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { JugadoresService } from '../jugadores.service'; 
 import { DetallesComponent } from '../detalles/detalles.component';
 import { MediaComponent } from '../media/media.component';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { PlayerFilterPipe } from '../player-filter.pipe';
 
 
 
@@ -10,7 +13,7 @@ import { MediaComponent } from '../media/media.component';
 @Component({
   selector: 'app-players',
   standalone: true,
-  imports: [CommonModule, DetallesComponent, MediaComponent],
+  imports: [CommonModule, FormsModule, DetallesComponent, MediaComponent, PlayerFilterPipe],
   templateUrl: './players.component.html',
   styleUrl: './players.component.css'
 })
@@ -21,10 +24,23 @@ export class PlayersComponent{
   videosPath = 'assets/';
   videoName: any;
   videoPath: any;
+  selectedAge: number = 0; // Inicializa la edad seleccionada como "Todos"
+  selectedPosition: string = ''; // Inicializa la posición seleccionada como "Todos"
+  ageOptions: number[] = [];
   
 
   
-  constructor(private jugadoresService: JugadoresService) { }
+  constructor(private jugadoresService: JugadoresService) { 
+    this.generateAgeOptions();
+  }
+
+  generateAgeOptions(): void {
+    for (let i = 18; i <= 50; i++) {
+      this.ageOptions.push(i);
+      console.log(this.selectedAge)
+      
+    }
+  }
 
   ngOnInit(): void {
     this.listaJugadores = this.jugadoresService.obtenerJugadores();
