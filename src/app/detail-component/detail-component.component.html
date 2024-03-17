@@ -1,0 +1,20 @@
+<section class="container">
+    
+    <button [routerLink]="['/']" class="btn btn-warning my-4">Ver Todos</button> 
+    <div class="row">
+        <div class="col-md-6">
+            <div class="d-flex align-items-center">
+                <h1>{{player.nombre}}</h1>
+            </div>
+
+            <app-media-component>
+                <source src="{{player.video}}" />
+            </app-media-component>
+        </div>
+        <div class="col-md-6">
+
+
+            <p>{{player.age}}</p>
+        </div>
+    </div>
+</section>
