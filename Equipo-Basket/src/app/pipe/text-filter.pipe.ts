@@ -10,6 +10,7 @@ export class NameFilterPipe implements PipeTransform {
     transform(items: any[], searchText:string,opcion:string ): any[] {
         console.log(searchText);
         console.log(opcion);
+
         if (!items) return[];
         if (!searchText) return [];
 
@@ -29,7 +30,7 @@ export class NameFilterPipe implements PipeTransform {
                 console.log(item.edad);
                 return item.edad==searchText;
             })
-        }
+        } 
         else 
         {
             return items.filter((item: any) => {

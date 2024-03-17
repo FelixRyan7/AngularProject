@@ -1,8 +1,8 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { PlayersComponentComponent } from "./players-component/players-component.component";
-import {PipeNombreComponent} from "./pipe-nombre/pipe-nombre.component";
 import { FormsModule, NgModel } from '@angular/forms';
+import { MediaComponentComponent } from './media-component/media-component.component';
 
 
 
@@ -11,7 +11,7 @@ import { FormsModule, NgModel } from '@angular/forms';
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [RouterOutlet, PlayersComponentComponent,PipeNombreComponent,FormsModule],
+    imports: [RouterOutlet, PlayersComponentComponent,FormsModule,MediaComponentComponent],
     
    
 })
