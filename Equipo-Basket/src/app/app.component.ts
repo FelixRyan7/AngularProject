@@ -1,17 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { PlayersComponentComponent } from "./players-component/players-component.component";
+import { FormsModule, NgModel } from '@angular/forms';
+import { MediaComponentComponent } from './media-component/media-component.component';
 
-declare var $: any;
+
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+    selector: 'app-root',
+    standalone: true,
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css',
+    imports: [RouterOutlet, PlayersComponentComponent,FormsModule,MediaComponentComponent],
+    
+   
 })
 export class AppComponent {
-  title = 'Equipo-Basket';
-
- 
+  title = 'equipo-basket';
+  
 }

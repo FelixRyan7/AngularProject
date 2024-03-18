@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Equipo-Basket": {
+    "equipo-basket": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -25,14 +25,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "src/styles.css"
             ],
-            "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.js"
-              
-            ]
+            "scripts": [],
+            "server": "src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "server.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -62,10 +62,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Equipo-Basket:build:production"
+              "buildTarget": "equipo-basket:build:production"
             },
             "development": {
-              "buildTarget": "Equipo-Basket:build:development"
+              "buildTarget": "equipo-basket:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -73,7 +73,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "Equipo-Basket:build"
+            "buildTarget": "equipo-basket:build"
           }
         },
         "test": {
