@@ -12,7 +12,7 @@ export class NameFilterPipe implements PipeTransform {
         console.log(opcion);
 
         if (!items) return[];
-        if (!searchText) return [];
+        if (!searchText) return items;
 
         searchText=searchText.toLowerCase();
         opcion=opcion.toLowerCase()
@@ -37,10 +37,5 @@ export class NameFilterPipe implements PipeTransform {
                 return item.nombre.toLowerCase().includes(searchText);
             })
         }
-      
-        
-        
-
-    }
-        
-    }
+    }        
+}

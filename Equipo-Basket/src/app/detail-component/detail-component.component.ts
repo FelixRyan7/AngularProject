@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {DatosPlayersService} from '../service/datos-players.service';
 import {RouterModule} from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { MediaComponentComponent } from '../media-component/media-component.component';
 
 @Component({

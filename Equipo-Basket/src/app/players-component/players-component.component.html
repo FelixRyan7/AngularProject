@@ -5,14 +5,14 @@
                 <label>Elige opcion de busqueda de tu jugador</label>
             </div>
             <div class="col-sm-1">
-                <select name="opcion" [(ngModel)]="opcion">
+                <select name="opcion" [(ngModel)]="opcion" class="form-control">
                     <option value="Nombre" selected>Nombre</option>
                     <option value="Posición">Posición</option>
                     <option value="Edad">Edad</option>
                   </select>
             </div>
             <div class="col-sm-2">
-                <input  type="text" placeholder="Jugador"  name="filterSearch"   [(ngModel)]="filterSearch" (ngModelChange)="mostrarJugadores($event)"  >
+                <input  type="text" class="form-control" placeholder="Jugador"  name="filterSearch"   [(ngModel)]="filterSearch" >
             </div>
           </div>
     </div>
@@ -20,29 +20,15 @@
 
 <section class="container" >
     <div class="row">
-        <div *ngFor="let player of players | nameFilter:filterSearch:opcion">
-            <article class="col-sm-6 col-md player-item" >
+        <article *ngFor="let player of players | nameFilter:filterSearch:opcion" class="col-sm-6 col-md player-item" >
                 <img src="{{player.img}}" />
                 <h3>{{player.nombre}} </h3>
+                <p><b>Número:</b> {{player.num}}</p>
+                <p *ngIf="!!player.anillos">Anillos NBA: {{player.anillos}}</p>
+                <p *ngIf="!player.anillos">Anillos NBA: Ninguno</p>
                 <p>Posición: {{player.posicion}}</p>
                 <p>Edad: {{player.edad}}</p>
                 <button [routerLink]="['player', player.id]" class="btn btn-primary">Ver detalle</button> 
-            </article>
-        </div>
-    </div>
-</section>
-
- <section  *ngIf="mostrarPlayers" class="container">
-    <div class="row">
-        @for (player of players; track player.id)
-        {
-            <article class="col-sm-6 col-md player-item" >
-                <img src="{{player.img}}" />
-                <h3>{{player.nombre}}</h3>
-                <p>Posición: {{player.posicion}}</p>
-                <p>Edad: {{player.edad}}</p>
-                <button [routerLink]="['player', player.id]" class="btn btn-primary">Ver detalle</button> 
-            </article>
-        }
+        </article>
     </div>
 </section>

@@ -24,20 +24,11 @@ export class PlayersComponentComponent implements OnInit{
 
   filterSearch ='';
   opcion='Nombre';
-  mostrarPlayers=true   ;
 
   constructor (private datosPlayerServie:DatosPlayersService){}
 
   ngOnInit():void{
    // this.getPlayers();
-    
-  }
-
-  mostrarJugadores($event:any): void {
-    if (this.filterSearch.trim()=='') {
-      this.mostrarPlayers=true;
-    }
-    else {this.mostrarPlayers=false;}
     
   }
 

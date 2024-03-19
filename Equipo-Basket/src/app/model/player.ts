@@ -3,7 +3,9 @@ export interface Player {
     nombre: string;
     posicion: string;
     num: number;
-    edad: number;
+    edad: String;
+    anillos: any;
+    descripcion: String;
     img: String;
     video: String;
 }
