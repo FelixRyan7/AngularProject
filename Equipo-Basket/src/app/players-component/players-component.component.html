@@ -23,7 +23,6 @@
         <article *ngFor="let player of players | nameFilter:filterSearch:opcion" class="col-sm-6 col-md player-item" >
                 <img src="{{player.img}}" />
                 <h3>{{player.nombre}} </h3>
-                <p><b>Número:</b> {{player.num}}</p>
                 <p *ngIf="!!player.anillos">Anillos NBA: {{player.anillos}}</p>
                 <p *ngIf="!player.anillos">Anillos NBA: Ninguno</p>
                 <p>Posición: {{player.posicion}}</p>
