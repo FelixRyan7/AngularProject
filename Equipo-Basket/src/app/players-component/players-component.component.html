@@ -1,15 +1,19 @@
 <section class="container">
     <div class="row">
-        @for (player of players; track player.id) {
-            <article class="col-sm-6 col-md player-item" >
-                <img src="{{player.img}}" />
+        @if (players.length > 0) {
+            @for (player of players; track player.id) {
+                <article class="col-sm-6 col-md player-item">
+                    <img src="{{player.img}}" />
 
-                <h3>{{player.nombre}}</h3>
-                <p>Posición: {{player.posicion}}</p>
-                <p>Edad: {{player.edad}}</p>
-                <button [routerLink]="['player', player.id]" class="btn btn-primary">Ver detalle</button> 
-            </article>
+                    <h3>{{player.nombre}}</h3>
+                    <p>Posición: {{player.posicion}}</p>
+                    <p>Edad: {{player.edad}}</p>
+                    <button [routerLink]="['player', player.id]" class="btn btn-primary">Ver detalle</button> 
+                </article>
+            }
+        }
+        @else {
+            <p>No hay jugadores disponibles.</p>
         }
     </div>
 </section>
-
