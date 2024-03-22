@@ -8,7 +8,7 @@ import { MediaComponentComponent } from '../media-component/media-component.comp
 @Component({
   selector: 'app-detail-component',
   standalone: true,
-  imports: [RouterModule, MediaComponentComponent],
+  imports: [RouterModule, MediaComponentComponent, CommonModule],
   templateUrl: './detail-component.component.html',
   styleUrl: './detail-component.component.css'
 })
