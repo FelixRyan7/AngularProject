@@ -1,5 +1,5 @@
-Incialiar proyecto:
+Iniciar proyecto:
 
-cd Equipo-Basket
-npm install
-npm run start
+	cd Equipo-Basket
+	npm install
+	npm run start
